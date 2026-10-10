@@ -1,0 +1,4985 @@
+{
+  "restaurant_name": "Madhav Dining Hall",
+  "users": [
+    {
+      "id": 1,
+      "name": "Madhav Dining Hall Manager",
+      "email": "admin@hotel.com",
+      "password": "$2a$10$dLfh.GqP8FepiAK4zBFlw.Ap.jEk0eXbOnh.n239gOitB6tIionF.",
+      "role": "manager"
+    },
+    {
+      "id": 2,
+      "name": "Kitchen Chef",
+      "email": "chef@hotel.com",
+      "password": "$2a$10$DvGROgarGsa3ug6B8Te4g.89jNQO4hD056i4lMYuKKqo2WFuADdbG",
+      "role": "staff"
+    }
+  ],
+  "tables": [
+    {
+      "id": 1,
+      "table_number": 1,
+      "capacity": 6,
+      "status": "available",
+      "qr_code_url": "/table/1"
+    },
+    {
+      "id": 2,
+      "table_number": 2,
+      "capacity": 4,
+      "status": "available",
+      "qr_code_url": "/table/2"
+    },
+    {
+      "id": 3,
+      "table_number": 3,
+      "capacity": 2,
+      "status": "available",
+      "qr_code_url": "/table/3"
+    },
+    {
+      "id": 4,
+      "table_number": 4,
+      "capacity": 6,
+      "status": "available",
+      "qr_code_url": "/table/4"
+    },
+    {
+      "id": 5,
+      "table_number": 5,
+      "capacity": 2,
+      "status": "available",
+      "qr_code_url": "/table/5"
+    },
+    {
+      "id": 6,
+      "table_number": 6,
+      "capacity": 4,
+      "status": "available",
+      "qr_code_url": "/table/6"
+    },
+    {
+      "id": 7,
+      "table_number": 7,
+      "capacity": 6,
+      "status": "available",
+      "qr_code_url": "/table/7"
+    },
+    {
+      "id": 8,
+      "table_number": 8,
+      "capacity": 4,
+      "status": "available",
+      "qr_code_url": "/table/8"
+    },
+    {
+      "id": 9,
+      "table_number": 9,
+      "capacity": 2,
+      "status": "available",
+      "qr_code_url": "/table/9"
+    },
+    {
+      "id": 10,
+      "table_number": 10,
+      "capacity": 6,
+      "status": "available",
+      "qr_code_url": "/table/10"
+    },
+    {
+      "id": 11,
+      "table_number": 11,
+      "capacity": 2,
+      "status": "available",
+      "qr_code_url": "/table/11"
+    },
+    {
+      "id": 12,
+      "table_number": 12,
+      "capacity": 4,
+      "status": "available",
+      "qr_code_url": "/table/12"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Starters"
+    },
+    {
+      "id": 2,
+      "name": "Main Course"
+    },
+    {
+      "id": 3,
+      "name": "Breads & Rice"
+    },
+    {
+      "id": 4,
+      "name": "Desserts"
+    },
+    {
+      "id": 5,
+      "name": "Beverages"
+    }
+  ],
+  "menu": [
+    {
+      "id": 1,
+      "category_id": 2,
+      "category_name": "Main Course",
+      "category": "Main Course",
+      "name": "Special Gujarati Unlimited Thali",
+      "description": "Authentic Gujarati feast: rotli, 2 seasonal sabjis, Gujarati dal & kadhi, chilled chaas, farsan, papad & salad.",
+      "price": 150,
+      "image_url": "/images/Gujarati_thali.jpg",
+      "is_veg": true,
+      "is_available": true,
+      "prep_time_minutes": 10
+    },
+    {
+      "id": 2,
+      "category_id": 2,
+      "category_name": "Main Course",
+      "category": "Main Course",
+      "name": "Paneer Butter Masala",
+      "description": "Tender cottage cheese cubes simmered in a rich, buttery, spiced tomato gravy garnished with mint.",
+      "price": 280,
+      "image_url": "/images/paneer-butter-masala.jpg",
+      "is_veg": true,
+      "is_available": true,
+      "prep_time_minutes": 20
+    },
+    {
+      "id": 3,
+      "category_id": 2,
+      "category_name": "Main Course",
+      "category": "Main Course",
+      "name": "Pav Bhaji Special",
+      "description": "Spiced mashed vegetable bhaji cooked on a flat tawa with generous butter, served with soft toasted pav & onions.",
+      "price": 100,
+      "image_url": "/images/Pav_Bhaji.jpg",
+      "is_veg": true,
+      "is_available": true,
+      "prep_time_minutes": 10
+    },
+    {
+      "id": 4,
+      "category_id": 1,
+      "category_name": "Starters",
+      "category": "Starters",
+      "name": "Crispy Golden Spring Rolls",
+      "description": "Golden fried crispy rolls stuffed with seasoned shredded vegetables, served piping hot with dips.",
+      "price": 190,
+      "image_url": "/images/veg-spring-rolls.jpg",
+      "is_veg": true,
+      "is_available": true,
+      "prep_time_minutes": 15
+    },
+    {
+      "id": 5,
+      "category_id": 3,
+      "category_name": "Breads & Rice",
+      "category": "Breads & Rice",
+      "name": "Garlic Butter Tandoori Naan",
+      "description": "Fresh clay-oven baked flatbread brushed with roasted garlic butter and fresh cilantro.",
+      "price": 65,
+      "image_url": "/images/garlic-naan.jpg",
+      "is_veg": true,
+      "is_available": true,
+      "prep_time_minutes": 10
+    },
+    {
+      "id": 6,
+      "category_id": 4,
+      "category_name": "Desserts",
+      "category": "Desserts",
+      "name": "Rich Chocolate Fudge Brownie",
+      "description": "Warm decadent fudge brownie baked with premium cocoa and loaded with rich chocolate chunks.",
+      "price": 180,
+      "image_url": "/images/sizzling-brownie.jpg",
+      "is_veg": true,
+      "is_available": true,
+      "prep_time_minutes": 5
+    },
+    {
+      "id": 7,
+      "category_id": 4,
+      "category_name": "Desserts",
+      "category": "Desserts",
+      "name": "Shahi Gulab Jamun (Bowl)",
+      "description": "Melt-in-mouth golden khoya dumplings soaked in fragrant cardamom and rose sugar syrup.",
+      "price": 110,
+      "image_url": "/images/gulab-jamun.jpg",
+      "is_veg": true,
+      "is_available": true,
+      "prep_time_minutes": 5
+    },
+    {
+      "id": 8,
+      "category_id": 5,
+      "category_name": "Beverages",
+      "category": "Beverages",
+      "name": "Fresh Mint Lime Mojito",
+      "description": "Tall glass with muddled fresh garden mint, lime wedges, crushed ice, and chilled sparkling soda.",
+      "price": 130,
+      "image_url": "/images/mint-mojito.jpg",
+      "is_veg": true,
+      "is_available": true,
+      "prep_time_minutes": 5
+    },
+    {
+      "id": 9,
+      "category_id": 5,
+      "category_name": "Beverages",
+      "category": "Beverages",
+      "name": "Special Desi Kulhad Chai",
+      "description": "Authentic hot kadak tea infused with fresh ginger & cardamom, served in a traditional earthen clay kulhad.",
+      "price": 60,
+      "image_url": "/images/masala-chai.jpg",
+      "is_veg": true,
+      "is_available": true,
+      "prep_time_minutes": 5
+    },
+    {
+      "id": 10,
+      "category_id": 5,
+      "category_name": "Beverages",
+      "category": "Beverages",
+      "name": "Chilled Lemon Iced Cola",
+      "description": "Refreshing fizzy dark cola served in a tall glass over crystal ice cubes with a fresh lemon slice.",
+      "price": 50,
+      "image_url": "/images/cold-drink.jpg",
+      "is_veg": true,
+      "is_available": true,
+      "prep_time_minutes": 3
+    }
+  ],
+  "orders": [
+    {
+      "id": 1129,
+      "order_number": "ORD-9456",
+      "table_number": 9,
+      "table_id": 9,
+      "customer_name": "Shubham Hiteshbhai Bhuva",
+      "customer_phone": "7016289070",
+      "total_amount": 556.5,
+      "status": "completed",
+      "payment_status": "paid",
+      "notes": "",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Crispy Golden Spring Rolls",
+          "price": 190,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Rich Chocolate Fudge Brownie",
+          "price": 180,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 10,
+          "item_name": "Chilled Lemon Iced Cola",
+          "price": 50,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Shahi Gulab Jamun (Bowl)",
+          "price": 110,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "created_at": "2026-10-09T13:09:34.636Z",
+      "updated_at": "2026-10-09T13:09:42.536Z"
+    },
+    {
+      "id": 1128,
+      "order_number": "ORD-9093",
+      "table_number": 10,
+      "table_id": 10,
+      "customer_name": "Guest (Table 10)",
+      "customer_phone": "",
+      "total_amount": 929.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "notes": "",
+      "items": [
+        {
+          "menu_item_id": 3,
+          "item_name": "Pav Bhaji Special",
+          "price": 100,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 2,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 1,
+          "item_name": "Special Gujarati Unlimited Thali",
+          "price": 150,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Tandoori Naan",
+          "price": 65,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 8,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Shahi Gulab Jamun (Bowl)",
+          "price": 110,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 10,
+          "item_name": "Chilled Lemon Iced Cola",
+          "price": 50,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "created_at": "2026-10-09T13:08:08.631Z",
+      "updated_at": "2026-10-09T13:08:43.519Z"
+    },
+    {
+      "id": 1127,
+      "order_number": "ORD-7448",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Guest (Table 3)",
+      "customer_phone": "",
+      "total_amount": 288.75,
+      "status": "completed",
+      "payment_status": "paid",
+      "notes": "",
+      "items": [
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "created_at": "2026-10-09T10:38:34.521Z",
+      "updated_at": "2026-10-09T11:02:31.469Z"
+    },
+    {
+      "id": 1008,
+      "order_number": "ORD-1008",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Neha Verma",
+      "customer_phone": "9873787911",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 8,
+          "item_name": "Gulab Jamun (2 Pcs)",
+          "price": 110,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 661.5,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "unspecified",
+      "created_at": "2026-10-09T09:40:00.000Z",
+      "updated_at": "2026-10-09T10:32:24.770Z"
+    },
+    {
+      "id": 1007,
+      "order_number": "ORD-1007",
+      "table_number": 6,
+      "table_id": 6,
+      "customer_name": "Rajesh Joshi",
+      "customer_phone": "9857472478",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 850.5,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "unspecified",
+      "created_at": "2026-10-09T08:50:00.000Z",
+      "updated_at": "2026-10-09T10:32:23.738Z"
+    },
+    {
+      "id": 1006,
+      "order_number": "ORD-1006",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Ananya Desai",
+      "customer_phone": "9852835516",
+      "items": [
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 987,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-10-09T08:10:00.000Z",
+      "updated_at": "2026-10-09T08:10:00.000Z"
+    },
+    {
+      "id": 1005,
+      "order_number": "ORD-1005",
+      "table_number": 5,
+      "table_id": 5,
+      "customer_name": "Vikram Singh",
+      "customer_phone": "9833437871",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 4,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1302,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-10-09T07:40:00.000Z",
+      "updated_at": "2026-10-09T07:40:00.000Z"
+    },
+    {
+      "id": 1004,
+      "order_number": "ORD-1004",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Sneha Gupta",
+      "customer_phone": "9872582850",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 871.5,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-10-09T07:15:00.000Z",
+      "updated_at": "2026-10-09T07:15:00.000Z"
+    },
+    {
+      "id": 1003,
+      "order_number": "ORD-1003",
+      "table_number": 1,
+      "table_id": 1,
+      "customer_name": "Rohan Mehta",
+      "customer_phone": "9815010943",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 635.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-10-09T06:45:00.000Z",
+      "updated_at": "2026-10-09T06:45:00.000Z"
+    },
+    {
+      "id": 1002,
+      "order_number": "ORD-1002",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Priya Sharma",
+      "customer_phone": "9886899334",
+      "items": [
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 3,
+          "item_name": "Crispy Veg Spring Rolls",
+          "price": 190,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 672,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-10-09T05:00:00.000Z",
+      "updated_at": "2026-10-09T05:00:00.000Z"
+    },
+    {
+      "id": 1001,
+      "order_number": "ORD-1001",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Aarav Patel",
+      "customer_phone": "9847284646",
+      "items": [
+        {
+          "menu_item_id": 10,
+          "item_name": "Masala Chai / Filter Coffee",
+          "price": 60,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 3,
+          "item_name": "Crispy Veg Spring Rolls",
+          "price": 190,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 325.5,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-10-09T03:45:00.000Z",
+      "updated_at": "2026-10-09T03:45:00.000Z"
+    },
+    {
+      "id": 1012,
+      "order_number": "ORD-1012",
+      "table_number": 1,
+      "table_id": 1,
+      "customer_name": "Vikram Singh",
+      "customer_phone": "9846089083",
+      "items": [
+        {
+          "menu_item_id": 3,
+          "item_name": "Crispy Veg Spring Rolls",
+          "price": 190,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 8,
+          "item_name": "Gulab Jamun (2 Pcs)",
+          "price": 110,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 924,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-10-08T15:45:00.000Z",
+      "updated_at": "2026-10-08T15:45:00.000Z"
+    },
+    {
+      "id": 1011,
+      "order_number": "ORD-1011",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Sneha Gupta",
+      "customer_phone": "9829783569",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 4,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1365,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-10-08T14:30:00.000Z",
+      "updated_at": "2026-10-08T14:30:00.000Z"
+    },
+    {
+      "id": 1010,
+      "order_number": "ORD-1010",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Rohan Mehta",
+      "customer_phone": "9831603153",
+      "items": [
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 987,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-10-08T09:00:00.000Z",
+      "updated_at": "2026-10-08T09:00:00.000Z"
+    },
+    {
+      "id": 1009,
+      "order_number": "ORD-1009",
+      "table_number": 1,
+      "table_id": 1,
+      "customer_name": "Priya Sharma",
+      "customer_phone": "9839370332",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 651,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-10-08T07:30:00.000Z",
+      "updated_at": "2026-10-08T07:30:00.000Z"
+    },
+    {
+      "id": 1015,
+      "order_number": "ORD-1015",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Vikram Singh",
+      "customer_phone": "9811382062",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 4,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1365,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-10-07T14:30:00.000Z",
+      "updated_at": "2026-10-07T14:30:00.000Z"
+    },
+    {
+      "id": 1014,
+      "order_number": "ORD-1014",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Sneha Gupta",
+      "customer_phone": "9875786196",
+      "items": [
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 987,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-10-07T09:00:00.000Z",
+      "updated_at": "2026-10-07T09:00:00.000Z"
+    },
+    {
+      "id": 1013,
+      "order_number": "ORD-1013",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Rohan Mehta",
+      "customer_phone": "9828782269",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 651,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-10-07T07:30:00.000Z",
+      "updated_at": "2026-10-07T07:30:00.000Z"
+    },
+    {
+      "id": 1019,
+      "order_number": "ORD-1019",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Rajesh Joshi",
+      "customer_phone": "9886844024",
+      "items": [
+        {
+          "menu_item_id": 3,
+          "item_name": "Crispy Veg Spring Rolls",
+          "price": 190,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 8,
+          "item_name": "Gulab Jamun (2 Pcs)",
+          "price": 110,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 924,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-10-06T15:45:00.000Z",
+      "updated_at": "2026-10-06T15:45:00.000Z"
+    },
+    {
+      "id": 1018,
+      "order_number": "ORD-1018",
+      "table_number": 5,
+      "table_id": 5,
+      "customer_name": "Ananya Desai",
+      "customer_phone": "9848971016",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 4,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1365,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-10-06T14:30:00.000Z",
+      "updated_at": "2026-10-06T14:30:00.000Z"
+    },
+    {
+      "id": 1017,
+      "order_number": "ORD-1017",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Vikram Singh",
+      "customer_phone": "9857251622",
+      "items": [
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 987,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-10-06T09:00:00.000Z",
+      "updated_at": "2026-10-06T09:00:00.000Z"
+    },
+    {
+      "id": 1016,
+      "order_number": "ORD-1016",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Sneha Gupta",
+      "customer_phone": "9894236440",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 651,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-10-06T07:30:00.000Z",
+      "updated_at": "2026-10-06T07:30:00.000Z"
+    },
+    {
+      "id": 1022,
+      "order_number": "ORD-1022",
+      "table_number": 6,
+      "table_id": 6,
+      "customer_name": "Rajesh Joshi",
+      "customer_phone": "9851586328",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 4,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1365,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-10-05T14:30:00.000Z",
+      "updated_at": "2026-10-05T14:30:00.000Z"
+    },
+    {
+      "id": 1021,
+      "order_number": "ORD-1021",
+      "table_number": 5,
+      "table_id": 5,
+      "customer_name": "Ananya Desai",
+      "customer_phone": "9888995025",
+      "items": [
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 987,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-10-05T09:00:00.000Z",
+      "updated_at": "2026-10-05T09:00:00.000Z"
+    },
+    {
+      "id": 1020,
+      "order_number": "ORD-1020",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Vikram Singh",
+      "customer_phone": "9824650318",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 651,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-10-05T07:30:00.000Z",
+      "updated_at": "2026-10-05T07:30:00.000Z"
+    },
+    {
+      "id": 1026,
+      "order_number": "ORD-1026",
+      "table_number": 5,
+      "table_id": 5,
+      "customer_name": "Amit Trivedi",
+      "customer_phone": "9810844892",
+      "items": [
+        {
+          "menu_item_id": 3,
+          "item_name": "Crispy Veg Spring Rolls",
+          "price": 190,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 8,
+          "item_name": "Gulab Jamun (2 Pcs)",
+          "price": 110,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 924,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-10-04T15:45:00.000Z",
+      "updated_at": "2026-10-04T15:45:00.000Z"
+    },
+    {
+      "id": 1025,
+      "order_number": "ORD-1025",
+      "table_number": 7,
+      "table_id": 7,
+      "customer_name": "Neha Verma",
+      "customer_phone": "9837136036",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 4,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1365,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-10-04T14:30:00.000Z",
+      "updated_at": "2026-10-04T14:30:00.000Z"
+    },
+    {
+      "id": 1024,
+      "order_number": "ORD-1024",
+      "table_number": 6,
+      "table_id": 6,
+      "customer_name": "Rajesh Joshi",
+      "customer_phone": "9899032149",
+      "items": [
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 987,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-10-04T09:00:00.000Z",
+      "updated_at": "2026-10-04T09:00:00.000Z"
+    },
+    {
+      "id": 1023,
+      "order_number": "ORD-1023",
+      "table_number": 5,
+      "table_id": 5,
+      "customer_name": "Ananya Desai",
+      "customer_phone": "9834159877",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 651,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-10-04T07:30:00.000Z",
+      "updated_at": "2026-10-04T07:30:00.000Z"
+    },
+    {
+      "id": 1029,
+      "order_number": "ORD-1029",
+      "table_number": 8,
+      "table_id": 8,
+      "customer_name": "Amit Trivedi",
+      "customer_phone": "9852659185",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 4,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1365,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-10-03T14:30:00.000Z",
+      "updated_at": "2026-10-03T14:30:00.000Z"
+    },
+    {
+      "id": 1028,
+      "order_number": "ORD-1028",
+      "table_number": 7,
+      "table_id": 7,
+      "customer_name": "Neha Verma",
+      "customer_phone": "9843951242",
+      "items": [
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 987,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-10-03T09:00:00.000Z",
+      "updated_at": "2026-10-03T09:00:00.000Z"
+    },
+    {
+      "id": 1027,
+      "order_number": "ORD-1027",
+      "table_number": 6,
+      "table_id": 6,
+      "customer_name": "Rajesh Joshi",
+      "customer_phone": "9840546080",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 651,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-10-03T07:30:00.000Z",
+      "updated_at": "2026-10-03T07:30:00.000Z"
+    },
+    {
+      "id": 1033,
+      "order_number": "ORD-1033",
+      "table_number": 7,
+      "table_id": 7,
+      "customer_name": "Suresh Kumar",
+      "customer_phone": "9854863726",
+      "items": [
+        {
+          "menu_item_id": 3,
+          "item_name": "Crispy Veg Spring Rolls",
+          "price": 190,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 8,
+          "item_name": "Gulab Jamun (2 Pcs)",
+          "price": 110,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 924,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-10-02T15:45:00.000Z",
+      "updated_at": "2026-10-02T15:45:00.000Z"
+    },
+    {
+      "id": 1032,
+      "order_number": "ORD-1032",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Kavita Shah",
+      "customer_phone": "9833378826",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 4,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1365,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-10-02T14:30:00.000Z",
+      "updated_at": "2026-10-02T14:30:00.000Z"
+    },
+    {
+      "id": 1031,
+      "order_number": "ORD-1031",
+      "table_number": 8,
+      "table_id": 8,
+      "customer_name": "Amit Trivedi",
+      "customer_phone": "9839826267",
+      "items": [
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 987,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-10-02T09:00:00.000Z",
+      "updated_at": "2026-10-02T09:00:00.000Z"
+    },
+    {
+      "id": 1030,
+      "order_number": "ORD-1030",
+      "table_number": 7,
+      "table_id": 7,
+      "customer_name": "Neha Verma",
+      "customer_phone": "9858863588",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 651,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-10-02T07:30:00.000Z",
+      "updated_at": "2026-10-02T07:30:00.000Z"
+    },
+    {
+      "id": 1036,
+      "order_number": "ORD-1036",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Suresh Kumar",
+      "customer_phone": "9848432838",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 4,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1365,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-10-01T14:30:00.000Z",
+      "updated_at": "2026-10-01T14:30:00.000Z"
+    },
+    {
+      "id": 1035,
+      "order_number": "ORD-1035",
+      "table_number": 9,
+      "table_id": 9,
+      "customer_name": "Kavita Shah",
+      "customer_phone": "9891043022",
+      "items": [
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 987,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-10-01T09:00:00.000Z",
+      "updated_at": "2026-10-01T09:00:00.000Z"
+    },
+    {
+      "id": 1034,
+      "order_number": "ORD-1034",
+      "table_number": 8,
+      "table_id": 8,
+      "customer_name": "Amit Trivedi",
+      "customer_phone": "9876399237",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 651,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-10-01T07:30:00.000Z",
+      "updated_at": "2026-10-01T07:30:00.000Z"
+    },
+    {
+      "id": 1038,
+      "order_number": "ORD-1038",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Priya Sharma",
+      "customer_phone": "9884821232",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-09-28T14:45:00.000Z",
+      "updated_at": "2026-09-28T14:45:00.000Z"
+    },
+    {
+      "id": 1037,
+      "order_number": "ORD-1037",
+      "table_number": 1,
+      "table_id": 1,
+      "customer_name": "Aarav Patel",
+      "customer_phone": "9893415395",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1149.75,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-09-28T08:00:00.000Z",
+      "updated_at": "2026-09-28T08:00:00.000Z"
+    },
+    {
+      "id": 1040,
+      "order_number": "ORD-1040",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Rohan Mehta",
+      "customer_phone": "9889236703",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-09-25T14:45:00.000Z",
+      "updated_at": "2026-09-25T14:45:00.000Z"
+    },
+    {
+      "id": 1039,
+      "order_number": "ORD-1039",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Priya Sharma",
+      "customer_phone": "9831389844",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1181.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-09-25T08:00:00.000Z",
+      "updated_at": "2026-09-25T08:00:00.000Z"
+    },
+    {
+      "id": 1042,
+      "order_number": "ORD-1042",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Sneha Gupta",
+      "customer_phone": "9894981956",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-09-20T14:45:00.000Z",
+      "updated_at": "2026-09-20T14:45:00.000Z"
+    },
+    {
+      "id": 1041,
+      "order_number": "ORD-1041",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Rohan Mehta",
+      "customer_phone": "9848235626",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1013.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-09-20T08:00:00.000Z",
+      "updated_at": "2026-09-20T08:00:00.000Z"
+    },
+    {
+      "id": 1044,
+      "order_number": "ORD-1044",
+      "table_number": 5,
+      "table_id": 5,
+      "customer_name": "Vikram Singh",
+      "customer_phone": "9827881196",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-09-15T14:45:00.000Z",
+      "updated_at": "2026-09-15T14:45:00.000Z"
+    },
+    {
+      "id": 1043,
+      "order_number": "ORD-1043",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Sneha Gupta",
+      "customer_phone": "9864360813",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1317.75,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-09-15T08:00:00.000Z",
+      "updated_at": "2026-09-15T08:00:00.000Z"
+    },
+    {
+      "id": 1046,
+      "order_number": "ORD-1046",
+      "table_number": 6,
+      "table_id": 6,
+      "customer_name": "Ananya Desai",
+      "customer_phone": "9859696172",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-09-10T14:45:00.000Z",
+      "updated_at": "2026-09-10T14:45:00.000Z"
+    },
+    {
+      "id": 1045,
+      "order_number": "ORD-1045",
+      "table_number": 5,
+      "table_id": 5,
+      "customer_name": "Vikram Singh",
+      "customer_phone": "9833566499",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1013.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-09-10T08:00:00.000Z",
+      "updated_at": "2026-09-10T08:00:00.000Z"
+    },
+    {
+      "id": 1048,
+      "order_number": "ORD-1048",
+      "table_number": 7,
+      "table_id": 7,
+      "customer_name": "Rajesh Joshi",
+      "customer_phone": "9844312038",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-09-05T14:45:00.000Z",
+      "updated_at": "2026-09-05T14:45:00.000Z"
+    },
+    {
+      "id": 1047,
+      "order_number": "ORD-1047",
+      "table_number": 6,
+      "table_id": 6,
+      "customer_name": "Ananya Desai",
+      "customer_phone": "9831635480",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1181.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-09-05T08:00:00.000Z",
+      "updated_at": "2026-09-05T08:00:00.000Z"
+    },
+    {
+      "id": 1050,
+      "order_number": "ORD-1050",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Rohan Mehta",
+      "customer_phone": "9823199291",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-08-29T14:45:00.000Z",
+      "updated_at": "2026-08-29T14:45:00.000Z"
+    },
+    {
+      "id": 1049,
+      "order_number": "ORD-1049",
+      "table_number": 1,
+      "table_id": 1,
+      "customer_name": "Priya Sharma",
+      "customer_phone": "9841369807",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1149.75,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-08-29T08:00:00.000Z",
+      "updated_at": "2026-08-29T08:00:00.000Z"
+    },
+    {
+      "id": 1052,
+      "order_number": "ORD-1052",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Sneha Gupta",
+      "customer_phone": "9811889063",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-08-22T14:45:00.000Z",
+      "updated_at": "2026-08-22T14:45:00.000Z"
+    },
+    {
+      "id": 1051,
+      "order_number": "ORD-1051",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Rohan Mehta",
+      "customer_phone": "9843688954",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1181.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-08-22T08:00:00.000Z",
+      "updated_at": "2026-08-22T08:00:00.000Z"
+    },
+    {
+      "id": 1054,
+      "order_number": "ORD-1054",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Vikram Singh",
+      "customer_phone": "9841119814",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-08-18T14:45:00.000Z",
+      "updated_at": "2026-08-18T14:45:00.000Z"
+    },
+    {
+      "id": 1053,
+      "order_number": "ORD-1053",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Sneha Gupta",
+      "customer_phone": "9873654634",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1013.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-08-18T08:00:00.000Z",
+      "updated_at": "2026-08-18T08:00:00.000Z"
+    },
+    {
+      "id": 1056,
+      "order_number": "ORD-1056",
+      "table_number": 5,
+      "table_id": 5,
+      "customer_name": "Ananya Desai",
+      "customer_phone": "9877417073",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-08-14T14:45:00.000Z",
+      "updated_at": "2026-08-14T14:45:00.000Z"
+    },
+    {
+      "id": 1055,
+      "order_number": "ORD-1055",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Vikram Singh",
+      "customer_phone": "9838164500",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1317.75,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-08-14T08:00:00.000Z",
+      "updated_at": "2026-08-14T08:00:00.000Z"
+    },
+    {
+      "id": 1058,
+      "order_number": "ORD-1058",
+      "table_number": 6,
+      "table_id": 6,
+      "customer_name": "Rajesh Joshi",
+      "customer_phone": "9851543670",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-08-08T14:45:00.000Z",
+      "updated_at": "2026-08-08T14:45:00.000Z"
+    },
+    {
+      "id": 1057,
+      "order_number": "ORD-1057",
+      "table_number": 5,
+      "table_id": 5,
+      "customer_name": "Ananya Desai",
+      "customer_phone": "9849846227",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1013.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-08-08T08:00:00.000Z",
+      "updated_at": "2026-08-08T08:00:00.000Z"
+    },
+    {
+      "id": 1060,
+      "order_number": "ORD-1060",
+      "table_number": 7,
+      "table_id": 7,
+      "customer_name": "Neha Verma",
+      "customer_phone": "9852200702",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-08-02T14:45:00.000Z",
+      "updated_at": "2026-08-02T14:45:00.000Z"
+    },
+    {
+      "id": 1059,
+      "order_number": "ORD-1059",
+      "table_number": 6,
+      "table_id": 6,
+      "customer_name": "Rajesh Joshi",
+      "customer_phone": "9862697194",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1181.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-08-02T08:00:00.000Z",
+      "updated_at": "2026-08-02T08:00:00.000Z"
+    },
+    {
+      "id": 1062,
+      "order_number": "ORD-1062",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Sneha Gupta",
+      "customer_phone": "9826617050",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-07-30T14:45:00.000Z",
+      "updated_at": "2026-07-30T14:45:00.000Z"
+    },
+    {
+      "id": 1061,
+      "order_number": "ORD-1061",
+      "table_number": 1,
+      "table_id": 1,
+      "customer_name": "Rohan Mehta",
+      "customer_phone": "9827494395",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1149.75,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-07-30T08:00:00.000Z",
+      "updated_at": "2026-07-30T08:00:00.000Z"
+    },
+    {
+      "id": 1064,
+      "order_number": "ORD-1064",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Vikram Singh",
+      "customer_phone": "9845303199",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-07-24T14:45:00.000Z",
+      "updated_at": "2026-07-24T14:45:00.000Z"
+    },
+    {
+      "id": 1063,
+      "order_number": "ORD-1063",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Sneha Gupta",
+      "customer_phone": "9897254436",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1181.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-07-24T08:00:00.000Z",
+      "updated_at": "2026-07-24T08:00:00.000Z"
+    },
+    {
+      "id": 1066,
+      "order_number": "ORD-1066",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Ananya Desai",
+      "customer_phone": "9898754758",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-07-19T14:45:00.000Z",
+      "updated_at": "2026-07-19T14:45:00.000Z"
+    },
+    {
+      "id": 1065,
+      "order_number": "ORD-1065",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Vikram Singh",
+      "customer_phone": "9869205573",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1013.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-07-19T08:00:00.000Z",
+      "updated_at": "2026-07-19T08:00:00.000Z"
+    },
+    {
+      "id": 1068,
+      "order_number": "ORD-1068",
+      "table_number": 5,
+      "table_id": 5,
+      "customer_name": "Rajesh Joshi",
+      "customer_phone": "9841511595",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-07-12T14:45:00.000Z",
+      "updated_at": "2026-07-12T14:45:00.000Z"
+    },
+    {
+      "id": 1067,
+      "order_number": "ORD-1067",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Ananya Desai",
+      "customer_phone": "9830868706",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1317.75,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-07-12T08:00:00.000Z",
+      "updated_at": "2026-07-12T08:00:00.000Z"
+    },
+    {
+      "id": 1070,
+      "order_number": "ORD-1070",
+      "table_number": 6,
+      "table_id": 6,
+      "customer_name": "Neha Verma",
+      "customer_phone": "9860329047",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-07-07T14:45:00.000Z",
+      "updated_at": "2026-07-07T14:45:00.000Z"
+    },
+    {
+      "id": 1069,
+      "order_number": "ORD-1069",
+      "table_number": 5,
+      "table_id": 5,
+      "customer_name": "Rajesh Joshi",
+      "customer_phone": "9888965719",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1013.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-07-07T08:00:00.000Z",
+      "updated_at": "2026-07-07T08:00:00.000Z"
+    },
+    {
+      "id": 1072,
+      "order_number": "ORD-1072",
+      "table_number": 7,
+      "table_id": 7,
+      "customer_name": "Amit Trivedi",
+      "customer_phone": "9887547159",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-07-03T14:45:00.000Z",
+      "updated_at": "2026-07-03T14:45:00.000Z"
+    },
+    {
+      "id": 1071,
+      "order_number": "ORD-1071",
+      "table_number": 6,
+      "table_id": 6,
+      "customer_name": "Neha Verma",
+      "customer_phone": "9837444213",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1181.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-07-03T08:00:00.000Z",
+      "updated_at": "2026-07-03T08:00:00.000Z"
+    },
+    {
+      "id": 1074,
+      "order_number": "ORD-1074",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Vikram Singh",
+      "customer_phone": "9856983227",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-06-28T14:45:00.000Z",
+      "updated_at": "2026-06-28T14:45:00.000Z"
+    },
+    {
+      "id": 1073,
+      "order_number": "ORD-1073",
+      "table_number": 1,
+      "table_id": 1,
+      "customer_name": "Sneha Gupta",
+      "customer_phone": "9851045349",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1149.75,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-06-28T08:00:00.000Z",
+      "updated_at": "2026-06-28T08:00:00.000Z"
+    },
+    {
+      "id": 1076,
+      "order_number": "ORD-1076",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Ananya Desai",
+      "customer_phone": "9832216218",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-06-21T14:45:00.000Z",
+      "updated_at": "2026-06-21T14:45:00.000Z"
+    },
+    {
+      "id": 1075,
+      "order_number": "ORD-1075",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Vikram Singh",
+      "customer_phone": "9819330374",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1181.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-06-21T08:00:00.000Z",
+      "updated_at": "2026-06-21T08:00:00.000Z"
+    },
+    {
+      "id": 1078,
+      "order_number": "ORD-1078",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Rajesh Joshi",
+      "customer_phone": "9835813436",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-06-16T14:45:00.000Z",
+      "updated_at": "2026-06-16T14:45:00.000Z"
+    },
+    {
+      "id": 1077,
+      "order_number": "ORD-1077",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Ananya Desai",
+      "customer_phone": "9880218063",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1013.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-06-16T08:00:00.000Z",
+      "updated_at": "2026-06-16T08:00:00.000Z"
+    },
+    {
+      "id": 1080,
+      "order_number": "ORD-1080",
+      "table_number": 5,
+      "table_id": 5,
+      "customer_name": "Neha Verma",
+      "customer_phone": "9856759166",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-06-11T14:45:00.000Z",
+      "updated_at": "2026-06-11T14:45:00.000Z"
+    },
+    {
+      "id": 1079,
+      "order_number": "ORD-1079",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Rajesh Joshi",
+      "customer_phone": "9897126854",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1317.75,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-06-11T08:00:00.000Z",
+      "updated_at": "2026-06-11T08:00:00.000Z"
+    },
+    {
+      "id": 1082,
+      "order_number": "ORD-1082",
+      "table_number": 6,
+      "table_id": 6,
+      "customer_name": "Amit Trivedi",
+      "customer_phone": "9862337205",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-06-06T14:45:00.000Z",
+      "updated_at": "2026-06-06T14:45:00.000Z"
+    },
+    {
+      "id": 1081,
+      "order_number": "ORD-1081",
+      "table_number": 5,
+      "table_id": 5,
+      "customer_name": "Neha Verma",
+      "customer_phone": "9827185881",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1013.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-06-06T08:00:00.000Z",
+      "updated_at": "2026-06-06T08:00:00.000Z"
+    },
+    {
+      "id": 1084,
+      "order_number": "ORD-1084",
+      "table_number": 7,
+      "table_id": 7,
+      "customer_name": "Kavita Shah",
+      "customer_phone": "9883004794",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-06-01T14:45:00.000Z",
+      "updated_at": "2026-06-01T14:45:00.000Z"
+    },
+    {
+      "id": 1083,
+      "order_number": "ORD-1083",
+      "table_number": 6,
+      "table_id": 6,
+      "customer_name": "Amit Trivedi",
+      "customer_phone": "9840372915",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1181.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-06-01T08:00:00.000Z",
+      "updated_at": "2026-06-01T08:00:00.000Z"
+    },
+    {
+      "id": 1086,
+      "order_number": "ORD-1086",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Ananya Desai",
+      "customer_phone": "9847097125",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-05-27T14:45:00.000Z",
+      "updated_at": "2026-05-27T14:45:00.000Z"
+    },
+    {
+      "id": 1085,
+      "order_number": "ORD-1085",
+      "table_number": 1,
+      "table_id": 1,
+      "customer_name": "Vikram Singh",
+      "customer_phone": "9819019748",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1149.75,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-05-27T08:00:00.000Z",
+      "updated_at": "2026-05-27T08:00:00.000Z"
+    },
+    {
+      "id": 1088,
+      "order_number": "ORD-1088",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Rajesh Joshi",
+      "customer_phone": "9827916319",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-05-20T14:45:00.000Z",
+      "updated_at": "2026-05-20T14:45:00.000Z"
+    },
+    {
+      "id": 1087,
+      "order_number": "ORD-1087",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Ananya Desai",
+      "customer_phone": "9868648719",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1181.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-05-20T08:00:00.000Z",
+      "updated_at": "2026-05-20T08:00:00.000Z"
+    },
+    {
+      "id": 1090,
+      "order_number": "ORD-1090",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Neha Verma",
+      "customer_phone": "9823560478",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-05-15T14:45:00.000Z",
+      "updated_at": "2026-05-15T14:45:00.000Z"
+    },
+    {
+      "id": 1089,
+      "order_number": "ORD-1089",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Rajesh Joshi",
+      "customer_phone": "9832010450",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1013.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-05-15T08:00:00.000Z",
+      "updated_at": "2026-05-15T08:00:00.000Z"
+    },
+    {
+      "id": 1092,
+      "order_number": "ORD-1092",
+      "table_number": 5,
+      "table_id": 5,
+      "customer_name": "Amit Trivedi",
+      "customer_phone": "9860427346",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-05-09T14:45:00.000Z",
+      "updated_at": "2026-05-09T14:45:00.000Z"
+    },
+    {
+      "id": 1091,
+      "order_number": "ORD-1091",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Neha Verma",
+      "customer_phone": "9882870563",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1317.75,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-05-09T08:00:00.000Z",
+      "updated_at": "2026-05-09T08:00:00.000Z"
+    },
+    {
+      "id": 1094,
+      "order_number": "ORD-1094",
+      "table_number": 6,
+      "table_id": 6,
+      "customer_name": "Kavita Shah",
+      "customer_phone": "9810074742",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-05-04T14:45:00.000Z",
+      "updated_at": "2026-05-04T14:45:00.000Z"
+    },
+    {
+      "id": 1093,
+      "order_number": "ORD-1093",
+      "table_number": 5,
+      "table_id": 5,
+      "customer_name": "Amit Trivedi",
+      "customer_phone": "9815267861",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1013.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-05-04T08:00:00.000Z",
+      "updated_at": "2026-05-04T08:00:00.000Z"
+    },
+    {
+      "id": 1096,
+      "order_number": "ORD-1096",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Rajesh Joshi",
+      "customer_phone": "9863967290",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-04-26T14:45:00.000Z",
+      "updated_at": "2026-04-26T14:45:00.000Z"
+    },
+    {
+      "id": 1095,
+      "order_number": "ORD-1095",
+      "table_number": 1,
+      "table_id": 1,
+      "customer_name": "Ananya Desai",
+      "customer_phone": "9860386889",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1149.75,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-04-26T08:00:00.000Z",
+      "updated_at": "2026-04-26T08:00:00.000Z"
+    },
+    {
+      "id": 1098,
+      "order_number": "ORD-1098",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Neha Verma",
+      "customer_phone": "9846848330",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-04-18T14:45:00.000Z",
+      "updated_at": "2026-04-18T14:45:00.000Z"
+    },
+    {
+      "id": 1097,
+      "order_number": "ORD-1097",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Rajesh Joshi",
+      "customer_phone": "9866397668",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1181.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-04-18T08:00:00.000Z",
+      "updated_at": "2026-04-18T08:00:00.000Z"
+    },
+    {
+      "id": 1100,
+      "order_number": "ORD-1100",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Amit Trivedi",
+      "customer_phone": "9813613131",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-04-12T14:45:00.000Z",
+      "updated_at": "2026-04-12T14:45:00.000Z"
+    },
+    {
+      "id": 1099,
+      "order_number": "ORD-1099",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Neha Verma",
+      "customer_phone": "9823047036",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1013.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-04-12T08:00:00.000Z",
+      "updated_at": "2026-04-12T08:00:00.000Z"
+    },
+    {
+      "id": 1102,
+      "order_number": "ORD-1102",
+      "table_number": 5,
+      "table_id": 5,
+      "customer_name": "Kavita Shah",
+      "customer_phone": "9836786500",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-04-06T14:45:00.000Z",
+      "updated_at": "2026-04-06T14:45:00.000Z"
+    },
+    {
+      "id": 1101,
+      "order_number": "ORD-1101",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Amit Trivedi",
+      "customer_phone": "9866236628",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1317.75,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-04-06T08:00:00.000Z",
+      "updated_at": "2026-04-06T08:00:00.000Z"
+    },
+    {
+      "id": 1104,
+      "order_number": "ORD-1104",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Neha Verma",
+      "customer_phone": "9860496469",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-03-25T14:45:00.000Z",
+      "updated_at": "2026-03-25T14:45:00.000Z"
+    },
+    {
+      "id": 1103,
+      "order_number": "ORD-1103",
+      "table_number": 1,
+      "table_id": 1,
+      "customer_name": "Rajesh Joshi",
+      "customer_phone": "9886177965",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1149.75,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-03-25T08:00:00.000Z",
+      "updated_at": "2026-03-25T08:00:00.000Z"
+    },
+    {
+      "id": 1106,
+      "order_number": "ORD-1106",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Amit Trivedi",
+      "customer_phone": "9887380373",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-03-19T14:45:00.000Z",
+      "updated_at": "2026-03-19T14:45:00.000Z"
+    },
+    {
+      "id": 1105,
+      "order_number": "ORD-1105",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Neha Verma",
+      "customer_phone": "9879006828",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1181.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-03-19T08:00:00.000Z",
+      "updated_at": "2026-03-19T08:00:00.000Z"
+    },
+    {
+      "id": 1108,
+      "order_number": "ORD-1108",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Kavita Shah",
+      "customer_phone": "9810476833",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-03-14T14:45:00.000Z",
+      "updated_at": "2026-03-14T14:45:00.000Z"
+    },
+    {
+      "id": 1107,
+      "order_number": "ORD-1107",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Amit Trivedi",
+      "customer_phone": "9897551023",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1013.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-03-14T08:00:00.000Z",
+      "updated_at": "2026-03-14T08:00:00.000Z"
+    },
+    {
+      "id": 1110,
+      "order_number": "ORD-1110",
+      "table_number": 5,
+      "table_id": 5,
+      "customer_name": "Suresh Kumar",
+      "customer_phone": "9857062025",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-03-08T14:45:00.000Z",
+      "updated_at": "2026-03-08T14:45:00.000Z"
+    },
+    {
+      "id": 1109,
+      "order_number": "ORD-1109",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Kavita Shah",
+      "customer_phone": "9832346736",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1317.75,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-03-08T08:00:00.000Z",
+      "updated_at": "2026-03-08T08:00:00.000Z"
+    },
+    {
+      "id": 1112,
+      "order_number": "ORD-1112",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Amit Trivedi",
+      "customer_phone": "9876027564",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-02-24T14:45:00.000Z",
+      "updated_at": "2026-02-24T14:45:00.000Z"
+    },
+    {
+      "id": 1111,
+      "order_number": "ORD-1111",
+      "table_number": 1,
+      "table_id": 1,
+      "customer_name": "Neha Verma",
+      "customer_phone": "9824745890",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1149.75,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-02-24T08:00:00.000Z",
+      "updated_at": "2026-02-24T08:00:00.000Z"
+    },
+    {
+      "id": 1114,
+      "order_number": "ORD-1114",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Kavita Shah",
+      "customer_phone": "9879586011",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-02-18T14:45:00.000Z",
+      "updated_at": "2026-02-18T14:45:00.000Z"
+    },
+    {
+      "id": 1113,
+      "order_number": "ORD-1113",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Amit Trivedi",
+      "customer_phone": "9819248004",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1181.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-02-18T08:00:00.000Z",
+      "updated_at": "2026-02-18T08:00:00.000Z"
+    },
+    {
+      "id": 1116,
+      "order_number": "ORD-1116",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Suresh Kumar",
+      "customer_phone": "9823295943",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-02-11T14:45:00.000Z",
+      "updated_at": "2026-02-11T14:45:00.000Z"
+    },
+    {
+      "id": 1115,
+      "order_number": "ORD-1115",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Kavita Shah",
+      "customer_phone": "9821649928",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1013.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-02-11T08:00:00.000Z",
+      "updated_at": "2026-02-11T08:00:00.000Z"
+    },
+    {
+      "id": 1118,
+      "order_number": "ORD-1118",
+      "table_number": 5,
+      "table_id": 5,
+      "customer_name": "Pooja Iyer",
+      "customer_phone": "9834476562",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-02-05T14:45:00.000Z",
+      "updated_at": "2026-02-05T14:45:00.000Z"
+    },
+    {
+      "id": 1117,
+      "order_number": "ORD-1117",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Suresh Kumar",
+      "customer_phone": "9861744764",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1317.75,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-02-05T08:00:00.000Z",
+      "updated_at": "2026-02-05T08:00:00.000Z"
+    },
+    {
+      "id": 1120,
+      "order_number": "ORD-1120",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Kavita Shah",
+      "customer_phone": "9866506869",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-01-28T14:45:00.000Z",
+      "updated_at": "2026-01-28T14:45:00.000Z"
+    },
+    {
+      "id": 1119,
+      "order_number": "ORD-1119",
+      "table_number": 1,
+      "table_id": 1,
+      "customer_name": "Amit Trivedi",
+      "customer_phone": "9818117434",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1149.75,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-01-28T08:00:00.000Z",
+      "updated_at": "2026-01-28T08:00:00.000Z"
+    },
+    {
+      "id": 1122,
+      "order_number": "ORD-1122",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Suresh Kumar",
+      "customer_phone": "9835797373",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-01-20T14:45:00.000Z",
+      "updated_at": "2026-01-20T14:45:00.000Z"
+    },
+    {
+      "id": 1121,
+      "order_number": "ORD-1121",
+      "table_number": 2,
+      "table_id": 2,
+      "customer_name": "Kavita Shah",
+      "customer_phone": "9866208212",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1181.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-01-20T08:00:00.000Z",
+      "updated_at": "2026-01-20T08:00:00.000Z"
+    },
+    {
+      "id": 1124,
+      "order_number": "ORD-1124",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Pooja Iyer",
+      "customer_phone": "9865055156",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-01-15T14:45:00.000Z",
+      "updated_at": "2026-01-15T14:45:00.000Z"
+    },
+    {
+      "id": 1123,
+      "order_number": "ORD-1123",
+      "table_number": 3,
+      "table_id": 3,
+      "customer_name": "Suresh Kumar",
+      "customer_phone": "9841913626",
+      "items": [
+        {
+          "menu_item_id": 1,
+          "item_name": "Paneer Butter Masala",
+          "price": 280,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 7,
+          "item_name": "Sizzling Brownie with Ice Cream",
+          "price": 210,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1013.25,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-01-15T08:00:00.000Z",
+      "updated_at": "2026-01-15T08:00:00.000Z"
+    },
+    {
+      "id": 1126,
+      "order_number": "ORD-1126",
+      "table_number": 5,
+      "table_id": 5,
+      "customer_name": "Aarav Patel",
+      "customer_phone": "9852273723",
+      "items": [
+        {
+          "menu_item_id": 4,
+          "item_name": "Tandoori Chicken Tikka",
+          "price": 320,
+          "quantity": 1,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 9,
+          "item_name": "Fresh Mint Lime Mojito",
+          "price": 130,
+          "quantity": 2,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1323,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "upi",
+      "created_at": "2026-01-08T14:45:00.000Z",
+      "updated_at": "2026-01-08T14:45:00.000Z"
+    },
+    {
+      "id": 1125,
+      "order_number": "ORD-1125",
+      "table_number": 4,
+      "table_id": 4,
+      "customer_name": "Pooja Iyer",
+      "customer_phone": "9850455637",
+      "items": [
+        {
+          "menu_item_id": 2,
+          "item_name": "Butter Chicken (Murgh Makhani)",
+          "price": 360,
+          "quantity": 2,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 5,
+          "item_name": "Garlic Butter Naan",
+          "price": 65,
+          "quantity": 3,
+          "special_instructions": ""
+        },
+        {
+          "menu_item_id": 6,
+          "item_name": "Hyderabadi Dum Biryani",
+          "price": 340,
+          "quantity": 1,
+          "special_instructions": ""
+        }
+      ],
+      "total_amount": 1317.75,
+      "status": "completed",
+      "payment_status": "paid",
+      "payment_method": "card",
+      "created_at": "2026-01-08T08:00:00.000Z",
+      "updated_at": "2026-01-08T08:00:00.000Z"
+    }
+  ]
+}

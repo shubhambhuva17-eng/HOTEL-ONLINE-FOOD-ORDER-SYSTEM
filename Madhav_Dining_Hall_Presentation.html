@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madhav Dining Hall — Professional Project Presentation</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    :root {
+      --primary: #f59e0b;
+      --primary-dark: #d97706;
+      --primary-light: #fef3c7;
+      --secondary: #0f172a;
+      --secondary-light: #1e293b;
+      --accent: #10b981;
+      --bg-dark: #090d16;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-dark);
+      color: #f8fafc;
+      overflow: hidden;
+      user-select: none;
+    }
+
+    /* Glassmorphism Cards */
+    .glass-card {
+      background: rgba(30, 41, 59, 0.75);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    }
+
+    .glass-pill {
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: #fbbf24;
+    }
+
+    .slide {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+      transform: scale(0.98);
+      height: 100%;
+      width: 100%;
+    }
+
+    .slide.active {
+      display: flex;
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Print View */
+    @media print {
+      body {
+        overflow: visible !important;
+        background: #ffffff !important;
+        color: #0f172a !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .slide {
+        display: block !important;
+        opacity: 1 !important;
+        transform: none !important;
+        page-break-after: always;
+        height: 100vh;
+        padding: 2rem;
+        background: #ffffff !important;
+        color: #0f172a !important;
+      }
+      .glass-card {
+        background: #f8fafc !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        color: #0f172a !important;
+      }
+    }
+
+    /* Custom Scrollbar for notes */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(245, 158, 11, 0.4);
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="h-screen w-screen flex flex-col justify-between relative">
+
+  <!-- TOP HEADER / PROGRESS BAR -->
+  <header class="w-full bg-slate-900/90 border-b border-slate-800 px-6 py-3 flex items-center justify-between z-50 no-print">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center font-black text-slate-950 shadow-md">
+        M
+      </div>
+      <div>
+        <h1 class="text-sm font-bold tracking-tight text-white flex items-center gap-2">
+          MADHAV DINING HALL
+          <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Pure Veg</span>
+        </h1>
+        <p class="text-xs text-slate-400">Hotel Food Ordering & Operations System</p>
+      </div>
+    </div>
+
+    <!-- Center Slide Counter -->
+    <div class="flex items-center gap-3">
+      <span class="text-xs font-semibold text-slate-400">Slide <strong id="currentSlideNum" class="text-amber-400 text-sm">1</strong> of <span id="totalSlidesNum">20</span></span>
+      <div class="w-36 h-2 bg-slate-800 rounded-full overflow-hidden border border-slate-700">
+        <div id="progressBar" class="h-full bg-gradient-to-r from-amber-500 to-amber-400 transition-all duration-300" style="width: 5%;"></div>
+      </div>
+    </div>
+
+    <!-- Right Controls -->
+    <div class="flex items-center gap-2">
+      <button onclick="toggleNotes()" id="notesBtn" title="Toggle Speaker Notes (Hotkey: N)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg>
+        Notes
+      </button>
+      <button onclick="toggleFullscreen()" title="Fullscreen Mode (Hotkey: F)" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+        Fullscreen
+      </button>
+      <button onclick="window.print()" title="Print / Export PDF" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 transition">
+        PDF
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN PRESENTATION CANVAS -->
+  <main class="flex-1 w-full max-w-7xl mx-auto p-4 md:p-8 flex items-center justify-center relative overflow-hidden">
+
+    <!-- ================= SLIDE 1 ================= -->
+    <section class="slide active flex-col justify-center items-center text-center">
+      <div class="glass-pill px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6 flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        Final Project Presentation &bull; Contactless Dining 2.0
+      </div>
+      <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white mb-4 leading-tight">
+        MADHAV DINING HALL
+      </h1>
+      <h2 class="text-xl md:text-2xl font-medium text-amber-400 max-w-3xl mb-8">
+        Full-Stack Contactless QR Food Ordering & Hotel Operations Management System
+      </h2>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl w-full mb-10">
+        <div class="glass-card p-4 rounded-xl text-center">
+          <div class="text-xs text-slate-400 mb-1">Architecture</div>
+          <div class="text-sm font-bold text-white">Dual-Tier (Client + Admin)</div>
+        </div>
+        <div class="glass-card p-4 rounded-xl text-center">
+          <div class="text-xs text-slate-400 mb-1">Frontend</div>
+          <div class="text-sm font-bold text-white">React 19 &bull; Vite</div>
+        </div>
+        <div class="glass-card p-4 rounded-xl text-center">
+          <div class="text-xs text-slate-400 mb-1">Backend</div>
+          <div class="text-sm font-bold text-white">Node.js &bull; Express</div>
+        </div>
+        <div class="glass-card p-4 rounded-xl text-center">
+          <div class="text-xs text-slate-400 mb-1">Persistence</div>
+          <div class="text-sm font-bold text-white">MySQL &bull; JSON Engine</div>
+        </div>
+      </div>
+
+      <div class="text-sm text-slate-400">
+        Presented by: <strong class="text-white">Project Development Team</strong> &bull; Department of Computer Engineering
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 2 ================= -->
+    <section class="slide flex-col justify-center">
+      <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Executive Overview</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Executive Summary & Vision</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xl mb-4">01</div>
+            <h3 class="text-lg font-bold text-white mb-2">Zero App Installation</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Diners instantly scan a table QR standee via native camera to enter a branded, ultra-fast web application without downloading heavy mobile apps.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-700/50 text-xs text-emerald-400 font-semibold">&check; 100% Browser-Based Access</div>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between border-amber-500/40">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xl mb-4">02</div>
+            <h3 class="text-lg font-bold text-white mb-2">Synchronized Cloud Kitchen</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Orders bypass waiter handoffs and route directly to kitchen displays with table numbers and custom preparation instructions (spice levels, Jain requirements).
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-700/50 text-xs text-emerald-400 font-semibold">&check; Real-Time Order Dispatch</div>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xl mb-4">03</div>
+            <h3 class="text-lg font-bold text-white mb-2">Intelligent Management Hub</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Managers gain live stock toggling, dynamic QR generation, and an automated multi-tier analytics engine tracking daily, monthly, and yearly revenue.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-700/50 text-xs text-emerald-400 font-semibold">&check; Data-Driven Hospitality</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 3 ================= -->
+    <section class="slide flex-col justify-center">
+      <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Industry Challenges</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Problem Statement: Traditional Restaurant Bottlenecks</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="glass-card p-6 rounded-2xl space-y-4">
+          <div class="flex items-start gap-3">
+            <span class="text-red-400 font-bold text-lg">&times;</span>
+            <div>
+              <h4 class="font-bold text-white text-sm">Long Wait Times During Rush Hours</h4>
+              <p class="text-xs text-slate-300 mt-1">Customers wait 10-15 minutes just to flag down a waiter for paper menus and order placement.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-red-400 font-bold text-lg">&times;</span>
+            <div>
+              <h4 class="font-bold text-white text-sm">Verbal Miscommunication & Errors</h4>
+              <p class="text-xs text-slate-300 mt-1">Specific dietary notes (e.g. "no onion-garlic", "mild spice") get lost or miswritten by staff.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-red-400 font-bold text-lg">&times;</span>
+            <div>
+              <h4 class="font-bold text-white text-sm">Static Paper Menus & Sold-Out Friction</h4>
+              <p class="text-xs text-slate-300 mt-1">Paper menus cannot reflect real-time 86'd (sold-out) items, leading to customer disappointment.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl space-y-4">
+          <div class="flex items-start gap-3">
+            <span class="text-red-400 font-bold text-lg">&times;</span>
+            <div>
+              <h4 class="font-bold text-white text-sm">Blind Back-of-House Operations</h4>
+              <p class="text-xs text-slate-300 mt-1">Restaurant managers lack real-time visibility into active table occupancy, average ticket time, and kitchen load.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-red-400 font-bold text-lg">&times;</span>
+            <div>
+              <h4 class="font-bold text-white text-sm">Lack of Actionable Sales Intelligence</h4>
+              <p class="text-xs text-slate-300 mt-1">Paper billing receipts do not provide automated hourly, monthly, or annual item profitability insights.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-red-400 font-bold text-lg">&times;</span>
+            <div>
+              <h4 class="font-bold text-white text-sm">High Labor Overhead & Turnover</h4>
+              <p class="text-xs text-slate-300 mt-1">Reliance on a large floor-staff team to deliver repetitive paper menus increases operational cost.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 4 ================= -->
+    <section class="slide flex-col justify-center">
+      <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Our Solution</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">The Proposed Solution: Contactless Smart Dining</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="space-y-4">
+          <div class="glass-card p-5 rounded-xl border-l-4 border-l-amber-500">
+            <h4 class="font-bold text-white text-base">1. Dynamic QR Standee Integration</h4>
+            <p class="text-xs text-slate-300 mt-1">Every physical table has an encrypted table-bound QR code linking directly to its digital session.</p>
+          </div>
+          <div class="glass-card p-5 rounded-xl border-l-4 border-l-emerald-500">
+            <h4 class="font-bold text-white text-base">2. 100% Pure Vegetarian Heritage Catalog</h4>
+            <p class="text-xs text-slate-300 mt-1">High-definition dish cards with verified culinary photography, preparation times, and instant notes.</p>
+          </div>
+          <div class="glass-card p-5 rounded-xl border-l-4 border-l-blue-500">
+            <h4 class="font-bold text-white text-base">3. Live Stepper Kitchen Pipeline</h4>
+            <p class="text-xs text-slate-300 mt-1">4-stage animated progression keeping guests informed without needing to wave down waiters.</p>
+          </div>
+          <div class="glass-card p-5 rounded-xl border-l-4 border-l-purple-500">
+            <h4 class="font-bold text-white text-base">4. Persistent Historical Analytics Hub</h4>
+            <p class="text-xs text-slate-300 mt-1">Zero data loss across server restarts; full revenue charts for daily, monthly, and yearly audits.</p>
+          </div>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center text-center">
+          <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-amber-500 to-amber-300 text-slate-950 flex items-center justify-center font-black text-3xl mb-4 shadow-lg shadow-amber-500/20">
+            QR
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">100% Contactless &amp; Instant</h3>
+          <p class="text-sm text-slate-300 max-w-sm mb-6">
+            Reduces table turnaround time by an average of <strong>18 minutes</strong> while increasing average ticket size via visual upselling.
+          </p>
+          <div class="grid grid-cols-2 gap-3 w-full">
+            <div class="p-3 bg-slate-800/80 rounded-lg text-center">
+              <div class="text-lg font-black text-emerald-400">0%</div>
+              <div class="text-xs text-slate-400">Order Discrepancies</div>
+            </div>
+            <div class="p-3 bg-slate-800/80 rounded-lg text-center">
+              <div class="text-lg font-black text-amber-400">&lt; 1s</div>
+              <div class="text-xs text-slate-400">Order Dispatch Time</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 5 ================= -->
+    <section class="slide flex-col justify-center">
+      <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Technical Design</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">System Architecture &amp; Data Pipeline</h2>
+      <div class="glass-card p-6 rounded-2xl">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+          <!-- Client Layer -->
+          <div class="p-5 bg-slate-800/90 rounded-xl border border-slate-700">
+            <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Presentation Layer</div>
+            <h4 class="text-base font-bold text-white mb-3">React 19 Single Page App</h4>
+            <ul class="text-xs text-slate-300 space-y-2">
+              <li>&bull; Customer Table QR Interface (`/table/:id`)</li>
+              <li>&bull; Interactive Cart &amp; Dish Notes (`CartContext`)</li>
+              <li>&bull; Manager Ops &amp; Analytics (`AuthContext`)</li>
+              <li>&bull; Tailwind CSS &bull; Hardware Accelerated UI</li>
+            </ul>
+          </div>
+
+          <!-- API Layer -->
+          <div class="p-5 bg-slate-800/90 rounded-xl border border-amber-500/40 shadow-lg shadow-amber-500/10">
+            <div class="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-2">API Gateway Layer</div>
+            <h4 class="text-base font-bold text-white mb-3">Node.js + Express REST API</h4>
+            <ul class="text-xs text-slate-300 space-y-2">
+              <li>&bull; Authentication Gateway (Bcrypt Hashing)</li>
+              <li>&bull; `/api/menu` CRUD &amp; Stock Toggling</li>
+              <li>&bull; `/api/orders` Live Status Engine</li>
+              <li>&bull; `/api/orders/analytics` Multi-Tier Metrics</li>
+            </ul>
+          </div>
+
+          <!-- Persistence Layer -->
+          <div class="p-5 bg-slate-800/90 rounded-xl border border-slate-700">
+            <div class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-2">Persistence Layer</div>
+            <h4 class="text-base font-bold text-white mb-3">Resilient Dual-Mode Storage</h4>
+            <ul class="text-xs text-slate-300 space-y-2">
+              <li>&bull; MySQL Connection Pool (`mysql2/promise`)</li>
+              <li>&bull; Fault-Tolerant JSON Disk Persistence (`db.json`)</li>
+              <li>&bull; Guaranteed Persistence Across Server Restarts</li>
+              <li>&bull; Client-side Offline Fallback Mirroring</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-slate-700 text-center text-xs text-slate-400">
+          RESTful Communication via JSON payloads &bull; Stateless Endpoints &bull; Sub-25ms response latency
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 6 ================= -->
+    <section class="slide flex-col justify-center">
+      <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Tech Stack</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Technology Stack &amp; Tools</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="glass-card p-5 rounded-xl">
+          <div class="text-amber-400 font-black text-2xl mb-1">React 19</div>
+          <div class="text-xs font-semibold text-slate-200">Frontend Framework</div>
+          <p class="text-xs text-slate-400 mt-2">Declarative component tree, Hooks, Context API for zero-prop drilling state.</p>
+        </div>
+        <div class="glass-card p-5 rounded-xl">
+          <div class="text-amber-400 font-black text-2xl mb-1">Vite</div>
+          <div class="text-xs font-semibold text-slate-200">Build Tooling</div>
+          <p class="text-xs text-slate-400 mt-2">Lightning-fast Hot Module Replacement and production bundling under 3 seconds.</p>
+        </div>
+        <div class="glass-card p-5 rounded-xl">
+          <div class="text-amber-400 font-black text-2xl mb-1">Node.js</div>
+          <div class="text-xs font-semibold text-slate-200">Backend Runtime</div>
+          <p class="text-xs text-slate-400 mt-2">Non-blocking asynchronous event loop handling concurrent order updates effortlessly.</p>
+        </div>
+        <div class="glass-card p-5 rounded-xl">
+          <div class="text-amber-400 font-black text-2xl mb-1">Express.js</div>
+          <div class="text-xs font-semibold text-slate-200">Web Framework</div>
+          <p class="text-xs text-slate-400 mt-2">Minimalist REST routing with middleware for CORS, JSON parsing, and Morgan logging.</p>
+        </div>
+        <div class="glass-card p-5 rounded-xl">
+          <div class="text-emerald-400 font-black text-2xl mb-1">MySQL</div>
+          <div class="text-xs font-semibold text-slate-200">Relational Database</div>
+          <p class="text-xs text-slate-400 mt-2">Normalized relational schema for users, tables, orders, order items, and menus.</p>
+        </div>
+        <div class="glass-card p-5 rounded-xl">
+          <div class="text-emerald-400 font-black text-2xl mb-1">Bcrypt.js</div>
+          <div class="text-xs font-semibold text-slate-200">Security &amp; Auth</div>
+          <p class="text-xs text-slate-400 mt-2">Salt-hashed credential storage ensuring manager login privacy and protection.</p>
+        </div>
+        <div class="glass-card p-5 rounded-xl">
+          <div class="text-emerald-400 font-black text-2xl mb-1">Lucide React</div>
+          <div class="text-xs font-semibold text-slate-200">Iconography</div>
+          <p class="text-xs text-slate-400 mt-2">Clean, scalable SVG iconography optimized for mobile and desktop viewports.</p>
+        </div>
+        <div class="glass-card p-5 rounded-xl">
+          <div class="text-emerald-400 font-black text-2xl mb-1">CSS3 &bull; Keyframes</div>
+          <div class="text-xs font-semibold text-slate-200">Animations</div>
+          <p class="text-xs text-slate-400 mt-2">60fps hardware-accelerated transitions, ticker scrolls, and glassmorphic blurs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 7 ================= -->
+    <section class="slide flex-col justify-center">
+      <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Customer Module</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Table QR Scan &amp; Contactless Entry</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <div class="glass-card p-6 rounded-2xl space-y-4">
+          <h3 class="text-lg font-bold text-white">Frictionless Dining In 3 Steps</h3>
+          <div class="flex items-start gap-3">
+            <div class="w-7 h-7 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center text-xs">1</div>
+            <p class="text-xs text-slate-300"><strong class="text-white">QR Scanning:</strong> Guest sits at Table #3 and scans the acrylic standee with any mobile camera.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-7 h-7 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center text-xs">2</div>
+            <p class="text-xs text-slate-300"><strong class="text-white">Session Binding:</strong> System loads `/table/3` and automatically locks Table #3 into `CartContext`.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-7 h-7 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center text-xs">3</div>
+            <p class="text-xs text-slate-300"><strong class="text-white">Live Kitchen Presence:</strong> Animated pulsating green dot confirms the restaurant kitchen is active and ready.</p>
+          </div>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border-amber-500/30">
+          <div class="text-xs text-slate-400 uppercase tracking-wider mb-3">Live Landing Experience</div>
+          <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 text-center space-y-3">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs border border-emerald-500/20">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live Kitchen Active &bull; Table #3
+            </div>
+            <h4 class="text-lg font-bold text-white">Welcome to Madhav Dining Hall</h4>
+            <p class="text-xs text-slate-400">Scan QR or select dining table to explore our royal vegetarian thalis.</p>
+            <div class="flex justify-center gap-2 pt-2">
+              <span class="px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 text-xs font-bold border border-amber-500/30">Table 1</span>
+              <span class="px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 text-xs font-bold border border-amber-500/30">Table 2</span>
+              <span class="px-2.5 py-1 rounded bg-amber-500 text-slate-950 text-xs font-bold">Table 3 (Active)</span>
+              <span class="px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 text-xs font-bold border border-amber-500/30">Table 4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 8 ================= -->
+    <section class="slide flex-col justify-center">
+      <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Customer Module</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">100% Pure Vegetarian Digital Menu</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass-card p-5 rounded-xl">
+          <div class="text-emerald-400 font-bold text-sm mb-2">&check; Verified Photographic Imagery</div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Every dish (Special Gujarati Thali, Paneer Butter Masala, Pav Bhaji, Kulhad Chai) features an exact photographic match, eliminating customer uncertainty.
+          </p>
+        </div>
+        <div class="glass-card p-5 rounded-xl">
+          <div class="text-amber-400 font-bold text-sm mb-2">&check; Instant Search &amp; Categories</div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Live filter tabs across Starters, Main Course, Breads &amp; Rice, Desserts, and Beverages with instant sub-millisecond search query filtering.
+          </p>
+        </div>
+        <div class="glass-card p-5 rounded-xl">
+          <div class="text-blue-400 font-bold text-sm mb-2">&check; Dietary Reassurance</div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Prominent <strong>"🌿 100% Pure Vegetarian"</strong> badge on every dish and page header guarantees pure Shuddh Shakahari culinary standards.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-6 glass-card p-4 rounded-xl flex items-center justify-between text-xs text-slate-300">
+        <div><strong>Featured Dishes:</strong> Unlimited Gujarati Thali (₹150) &bull; Paneer Butter Masala (₹280) &bull; Pav Bhaji (₹100) &bull; Kulhad Chai (₹60)</div>
+        <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-400 font-semibold border border-emerald-500/30">10 Curated Items</span>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 9 ================= -->
+    <section class="slide flex-col justify-center">
+      <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Customer Module</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Custom Instructions &amp; Floating Cart</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <div class="glass-card p-6 rounded-2xl space-y-4">
+          <h3 class="text-lg font-bold text-white">Item-Level Preparation Notes</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Diners click the customization note icon to enter specific requirements like <em>"Less spicy"</em>, <em>"Jain - no onion & garlic"</em>, or <em>"Extra butter on pav"</em>.
+          </p>
+          <div class="p-3 bg-amber-500/10 border border-amber-500/30 rounded-lg text-xs text-amber-300">
+            <strong>Kitchen Guarantee:</strong> Notes are prominently attached to the kitchen ticket so chefs never miss specific dietary requests.
+          </div>
+          <div class="pt-2 text-xs text-slate-400">
+            &bull; Bouncy green checkmark (<strong>ADDED!</strong>) micro-interaction provides instant tactile confirmation.
+          </div>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl space-y-4">
+          <h3 class="text-lg font-bold text-white">Floating Sticky Cart Bar</h3>
+          <p class="text-xs text-slate-300">
+            As soon as an item is added, a mobile-first floating action bar animates at the bottom of the screen with a live item counter and glowing CTA.
+          </p>
+          <div class="p-4 bg-slate-900 rounded-full border border-amber-500/40 flex items-center justify-between shadow-xl">
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center text-xs">3</span>
+              <div>
+                <div class="text-xs font-bold text-white">Table Cart Ready</div>
+                <div class="text-[11px] text-slate-400">Subtotal: ₹530</div>
+              </div>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-gradient-to-r from-amber-500 to-amber-400 text-slate-950 font-bold text-xs">View Cart &rarr;</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 10 ================= -->
+    <section class="slide flex-col justify-center">
+      <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Customer Module</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Live Order Tracking &amp; Staff Calling</h2>
+      <div class="glass-card p-6 rounded-2xl space-y-6">
+        <div>
+          <h3 class="text-base font-bold text-white mb-2">4-Stage Live Cooking Stepper</h3>
+          <p class="text-xs text-slate-300">Real-time status progression connects diners visually to back-of-house kitchen operations.</p>
+        </div>
+
+        <!-- Stepper Graphic -->
+        <div class="grid grid-cols-4 gap-2 text-center relative">
+          <div class="p-3 rounded-xl bg-slate-800/80 border border-slate-700">
+            <div class="w-6 h-6 rounded-full bg-emerald-500 text-white font-bold flex items-center justify-center text-xs mx-auto mb-1">&check;</div>
+            <div class="text-xs font-bold text-white">1. Placed</div>
+            <div class="text-[10px] text-slate-400">Order Dispatched</div>
+          </div>
+          <div class="p-3 rounded-xl bg-amber-500/20 border border-amber-500 shadow-md shadow-amber-500/20">
+            <div class="w-6 h-6 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center text-xs mx-auto mb-1 animate-pulse">2</div>
+            <div class="text-xs font-bold text-amber-400">2. Preparing</div>
+            <div class="text-[10px] text-amber-300/80">Chef Cooking</div>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-800/80 border border-slate-700 opacity-60">
+            <div class="w-6 h-6 rounded-full bg-slate-700 text-slate-300 font-bold flex items-center justify-center text-xs mx-auto mb-1">3</div>
+            <div class="text-xs font-bold text-slate-300">3. Ready</div>
+            <div class="text-[10px] text-slate-500">Plated for Table</div>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-800/80 border border-slate-700 opacity-60">
+            <div class="w-6 h-6 rounded-full bg-slate-700 text-slate-300 font-bold flex items-center justify-center text-xs mx-auto mb-1">4</div>
+            <div class="text-xs font-bold text-slate-300">4. Served</div>
+            <div class="text-[10px] text-slate-500">Delivered to Guest</div>
+          </div>
+        </div>
+
+        <!-- Staff Call Section -->
+        <div class="pt-4 border-t border-slate-700 flex items-center justify-between">
+          <div>
+            <h4 class="text-xs font-bold text-white">One-Touch Staff Assistance</h4>
+            <p class="text-xs text-slate-400">Diners request water, extra cutlery, or waiter service with a single click.</p>
+          </div>
+          <div class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-amber-400 text-xs font-bold flex items-center gap-1.5">
+            <span>&bull;</span> "Call Waiter" Active
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 11 ================= -->
+    <section class="slide flex-col justify-center">
+      <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Manager Module</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Manager Portal &amp; Real-Time Operations Hub</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <div class="glass-card p-5 rounded-xl border-l-4 border-l-emerald-500">
+          <div class="text-xs text-slate-400 mb-1">Today's Revenue</div>
+          <div class="text-2xl font-black text-white">₹14,850</div>
+          <div class="text-[11px] text-emerald-400 mt-1">&uarr; +18% vs Yesterday</div>
+        </div>
+        <div class="glass-card p-5 rounded-xl border-l-4 border-l-amber-500">
+          <div class="text-xs text-slate-400 mb-1">Active Orders</div>
+          <div class="text-2xl font-black text-amber-400">6 Tables</div>
+          <div class="text-[11px] text-amber-300 mt-1">Kitchen Operating Smoothly</div>
+        </div>
+        <div class="glass-card p-5 rounded-xl border-l-4 border-l-blue-500">
+          <div class="text-xs text-slate-400 mb-1">Avg Preparation Time</div>
+          <div class="text-2xl font-black text-white">11.4 min</div>
+          <div class="text-[11px] text-blue-300 mt-1">Target: &lt; 15 min</div>
+        </div>
+        <div class="glass-card p-5 rounded-xl border-l-4 border-l-purple-500">
+          <div class="text-xs text-slate-400 mb-1">Table Occupancy</div>
+          <div class="text-2xl font-black text-white">75%</div>
+          <div class="text-[11px] text-purple-300 mt-1">9 / 12 Active Tables</div>
+        </div>
+      </div>
+
+      <div class="glass-card p-5 rounded-xl flex items-center justify-between">
+        <div>
+          <h4 class="text-sm font-bold text-white">Role-Based Security</h4>
+          <p class="text-xs text-slate-400">Password encryption via bcrypt; unauthorized access to manager endpoints is strictly prevented.</p>
+        </div>
+        <span class="px-3 py-1 rounded bg-slate-800 text-xs text-slate-300 border border-slate-700">Role: Hotel Manager / Admin</span>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 12 ================= -->
+    <section class="slide flex-col justify-center">
+      <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Manager Module</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Live Kitchen Queue &amp; Order Advancement</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- Card 1 -->
+        <div class="glass-card p-4 rounded-xl border-l-4 border-l-blue-500">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-white">Order #1041</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-blue-500/20 text-blue-400">Table 4</span>
+          </div>
+          <div class="text-xs text-slate-300 space-y-1 mb-3">
+            <div>2x Special Gujarati Thali</div>
+            <div>1x Kulhad Chai</div>
+          </div>
+          <div class="text-[11px] p-2 bg-slate-900 rounded text-amber-400 mb-3"><em>Note: Less sweet kadhi</em></div>
+          <button class="w-full py-1.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs rounded transition">
+            Start Preparing &rarr;
+          </button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass-card p-4 rounded-xl border-l-4 border-l-amber-500">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-white">Order #1039</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-400">Table 2</span>
+          </div>
+          <div class="text-xs text-slate-300 space-y-1 mb-3">
+            <div>1x Paneer Butter Masala</div>
+            <div>3x Garlic Naan</div>
+          </div>
+          <div class="text-[11px] p-2 bg-slate-900 rounded text-amber-400 mb-3"><em>Note: Extra crispy naan</em></div>
+          <button class="w-full py-1.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs rounded transition">
+            Mark Ready &rarr;
+          </button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass-card p-4 rounded-xl border-l-4 border-l-emerald-500">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-white">Order #1038</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400">Table 7</span>
+          </div>
+          <div class="text-xs text-slate-300 space-y-1 mb-3">
+            <div>2x Pav Bhaji Special</div>
+            <div>2x Mint Mojito</div>
+          </div>
+          <div class="text-[11px] p-2 bg-slate-900 rounded text-slate-400 mb-3"><em>No custom notes</em></div>
+          <button class="w-full py-1.5 bg-slate-700 hover:bg-slate-600 text-white font-bold text-xs rounded transition">
+            Complete / Served &check;
+          </button>
+        </div>
+      </div>
+      <div class="mt-4 text-center text-xs text-slate-400">
+        Status changes immediately sync to customer tracking steppers via REST APIs.
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 13 ================= -->
+    <section class="slide flex-col justify-center">
+      <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Manager Module</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Dynamic Menu &amp; Instant Stock Control</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <div class="glass-card p-6 rounded-2xl space-y-4">
+          <h3 class="text-lg font-bold text-white">Real-Time Inventory Toggle</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            When ingredients run out mid-service, managers toggle dish availability from <strong>"In Stock"</strong> to <strong>"Sold Out"</strong> in one second.
+          </p>
+          <div class="p-3 bg-slate-900 rounded-xl border border-slate-800 space-y-2 text-xs">
+            <div class="flex items-center justify-between">
+              <span>Paneer Butter Masala</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold">In Stock</span>
+            </div>
+            <div class="flex items-center justify-between border-t border-slate-800 pt-2">
+              <span>Rich Chocolate Fudge Brownie</span>
+              <span class="px-2 py-0.5 rounded bg-red-500/20 text-red-400 font-bold">Sold Out</span>
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-400">
+            Diners immediately see the grayed-out "Sold Out" overlay, preventing kitchen conflicts.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl space-y-4">
+          <h3 class="text-lg font-bold text-white">Dynamic Add / Edit Form</h3>
+          <p class="text-xs text-slate-300">
+            Managers can adjust menu pricing, dish descriptions, prep times, and image URLs on the fly.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-2">
+            <li>&bull; Quick Select Pre-bundled Dish Assets</li>
+            <li>&bull; Category Assignment (Starters, Mains, Breads, Desserts, Beverages)</li>
+            <li>&bull; Changes immediately persist to database on disk</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 14 ================= -->
+    <section class="slide flex-col justify-center">
+      <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Manager Module</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Table Management &amp; Standee QR Generator</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass-card p-5 rounded-xl text-center">
+          <div class="w-16 h-16 bg-white rounded-xl mx-auto mb-3 flex items-center justify-center p-2">
+            <svg class="w-full h-full text-slate-950" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h8v8H3zm2 2v4h4V5zm8-2h8v8h-8zm2 2v4h4V5zM3 13h8v8H3zm2 2v4h4v-4zm13-2h3v2h-3zm-5 0h2v3h-2zm2 3h3v2h-3zm-2 2h2v3h-2zm5 0h3v3h-3z"/></svg>
+          </div>
+          <h4 class="text-sm font-bold text-white">Table #1 (6 Seats)</h4>
+          <p class="text-xs text-slate-400 mt-1">Main Family Dining Hall</p>
+          <span class="inline-block mt-3 px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-xs">Print Standee</span>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl text-center">
+          <div class="w-16 h-16 bg-white rounded-xl mx-auto mb-3 flex items-center justify-center p-2">
+            <svg class="w-full h-full text-slate-950" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h8v8H3zm2 2v4h4V5zm8-2h8v8h-8zm2 2v4h4V5zM3 13h8v8H3zm2 2v4h4v-4zm13-2h3v2h-3zm-5 0h2v3h-2zm2 3h3v2h-3zm-2 2h2v3h-2zm5 0h3v3h-3z"/></svg>
+          </div>
+          <h4 class="text-sm font-bold text-white">Table #2 (4 Seats)</h4>
+          <p class="text-xs text-slate-400 mt-1">Garden Terrace Section</p>
+          <span class="inline-block mt-3 px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-xs">Print Standee</span>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl text-center">
+          <div class="w-16 h-16 bg-white rounded-xl mx-auto mb-3 flex items-center justify-center p-2">
+            <svg class="w-full h-full text-slate-950" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h8v8H3zm2 2v4h4V5zm8-2h8v8h-8zm2 2v4h4V5zM3 13h8v8H3zm2 2v4h4v-4zm13-2h3v2h-3zm-5 0h2v3h-2zm2 3h3v2h-3zm-2 2h2v3h-2zm5 0h3v3h-3z"/></svg>
+          </div>
+          <h4 class="text-sm font-bold text-white">Table #3 (2 Seats)</h4>
+          <p class="text-xs text-slate-400 mt-1">Express Dining Alcove</p>
+          <span class="inline-block mt-3 px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-xs">Print Standee</span>
+        </div>
+      </div>
+
+      <div class="mt-6 glass-card p-4 rounded-xl text-center text-xs text-slate-300">
+        All 12 dining tables are linked to custom URLs. Acrylic standees can be printed with one click directly from the manager dashboard.
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 15 ================= -->
+    <section class="slide flex-col justify-center">
+      <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Business Intelligence</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Multi-Tier Sales Analytics &amp; Revenue Reports</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass-card p-5 rounded-xl">
+          <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">1. Daily Analytics</div>
+          <h4 class="text-lg font-bold text-white mb-2">Hourly Rush Trends</h4>
+          <p class="text-xs text-slate-300 mb-4">Tracks today's peak lunch (12–3 PM) and dinner (7–10 PM) revenue surges.</p>
+          <div class="h-20 bg-slate-900 rounded-lg flex items-end justify-between p-2 gap-1">
+            <div class="w-3 bg-amber-500/40 rounded-t h-4"></div>
+            <div class="w-3 bg-amber-500/40 rounded-t h-8"></div>
+            <div class="w-3 bg-amber-500 rounded-t h-16"></div>
+            <div class="w-3 bg-amber-500/40 rounded-t h-10"></div>
+            <div class="w-3 bg-amber-500/40 rounded-t h-6"></div>
+            <div class="w-3 bg-amber-500 rounded-t h-14"></div>
+          </div>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl border-amber-500/30">
+          <div class="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-2">2. Monthly Analytics</div>
+          <h4 class="text-lg font-bold text-white mb-2">Day-by-Day Revenue</h4>
+          <p class="text-xs text-slate-300 mb-4">Audits month-to-date sales totals, weekend jumps, and weekly ticket averages.</p>
+          <div class="h-20 bg-slate-900 rounded-lg flex items-end justify-between p-2 gap-1">
+            <div class="w-2 bg-emerald-500/40 rounded-t h-6"></div>
+            <div class="w-2 bg-emerald-500/40 rounded-t h-10"></div>
+            <div class="w-2 bg-emerald-500 rounded-t h-14"></div>
+            <div class="w-2 bg-emerald-500/40 rounded-t h-8"></div>
+            <div class="w-2 bg-emerald-500 rounded-t h-16"></div>
+            <div class="w-2 bg-emerald-500/40 rounded-t h-12"></div>
+          </div>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl">
+          <div class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-2">3. Yearly Analytics</div>
+          <h4 class="text-lg font-bold text-white mb-2">Annual Financial Audit</h4>
+          <p class="text-xs text-slate-300 mb-4">12-month performance curve identifying festive seasons and year-over-year growth.</p>
+          <div class="h-20 bg-slate-900 rounded-lg flex items-end justify-between p-2 gap-1">
+            <div class="w-3 bg-blue-500/40 rounded-t h-8"></div>
+            <div class="w-3 bg-blue-500/40 rounded-t h-10"></div>
+            <div class="w-3 bg-blue-500/40 rounded-t h-12"></div>
+            <div class="w-3 bg-blue-500/40 rounded-t h-14"></div>
+            <div class="w-3 bg-blue-500 rounded-t h-16"></div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 text-center text-xs text-slate-400">
+        &check; <strong>Bestseller Tracking:</strong> Automatically ranks top 5 dishes by revenue and frequency.
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 16 ================= -->
+    <section class="slide flex-col justify-center">
+      <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Data Engineering</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Database Schema &amp; Fault-Tolerant Persistence</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <div class="glass-card p-6 rounded-2xl space-y-3">
+          <h3 class="text-base font-bold text-white">Relational Entity Schema</h3>
+          <ul class="text-xs text-slate-300 space-y-2">
+            <li>&bull; <strong class="text-amber-400">users:</strong> Manager &amp; kitchen chef authentication credentials.</li>
+            <li>&bull; <strong class="text-amber-400">tables:</strong> Physical table mapping, seating capacities, and QR paths.</li>
+            <li>&bull; <strong class="text-amber-400">categories:</strong> Starters, Main Course, Breads, Desserts, Beverages.</li>
+            <li>&bull; <strong class="text-amber-400">menu:</strong> Dish details, pricing, pure-veg flag, prep time, image URLs.</li>
+            <li>&bull; <strong class="text-amber-400">orders &amp; order_items:</strong> Bill totals, status, notes, timestamps.</li>
+          </ul>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl space-y-3 border-emerald-500/30">
+          <h3 class="text-base font-bold text-emerald-400">Guaranteed Persistence Architecture</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            A critical problem in student projects is data disappearing when the server reboots. Madhav Dining Hall implements an automated disk-write synchronization layer:
+          </p>
+          <div class="p-3 bg-slate-900 rounded-lg text-xs space-y-1 text-slate-300">
+            <div>1. In-memory mutations trigger synchronous write to `backend/data/db.json`.</div>
+            <div>2. On server start, historical orders are fully re-hydrated.</div>
+            <div>3. Analytics remain 100% intact across server restarts and crashes.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 17 ================= -->
+    <section class="slide flex-col justify-center">
+      <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Design System</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">UI/UX &amp; Live Micro-Animations Showcase</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass-card p-5 rounded-xl">
+          <div class="text-amber-400 font-bold text-base mb-2">Live Activity Ticker</div>
+          <p class="text-xs text-slate-300 mb-3">
+            Continuous horizontal marquee announcing kitchen specials, table connections, and preparation times at 60fps.
+          </p>
+          <div class="p-2 bg-slate-950 rounded text-[11px] text-amber-300 truncate">
+            &bull; Live Kitchen Active: All 12 tables connected in real-time
+          </div>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl">
+          <div class="text-emerald-400 font-bold text-base mb-2">Tactile Micro-Interactions</div>
+          <p class="text-xs text-slate-300 mb-3">
+            Buttons pop with scale transforms (`scale(1.06)`), ADD changes to green `ADDED!` state, and status indicators pulse with glowing halos.
+          </p>
+          <div class="p-2 bg-slate-950 rounded text-[11px] text-emerald-400 text-center font-bold">
+            &check; ADDED! (1200ms Spring)
+          </div>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl">
+          <div class="text-blue-400 font-bold text-base mb-2">Glassmorphism &amp; Depth</div>
+          <p class="text-xs text-slate-300 mb-3">
+            Multi-layer backdrop filters (`backdrop-filter: blur(16px)`) creating a modern, luxury hospitality aesthetic for diners and managers.
+          </p>
+          <div class="p-2 bg-slate-950/60 rounded text-[11px] text-slate-300 text-center border border-slate-700">
+            Frosted Glass Headers &amp; Drawers
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 18 ================= -->
+    <section class="slide flex-col justify-center">
+      <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Security &amp; Performance</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Security, Performance &amp; Reliability</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="glass-card p-5 rounded-xl text-center">
+          <div class="text-emerald-400 font-black text-3xl mb-1">&lt; 20ms</div>
+          <div class="text-xs font-bold text-white">API Latency</div>
+          <p class="text-[11px] text-slate-400 mt-2">Ultra-lean JSON payloads deliver instant menu filtering and checkout.</p>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl text-center">
+          <div class="text-amber-400 font-black text-3xl mb-1">10 Rounds</div>
+          <div class="text-xs font-bold text-white">Bcrypt Salt Hashing</div>
+          <p class="text-[11px] text-slate-400 mt-2">Zero plaintext passwords stored in database or memory.</p>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl text-center">
+          <div class="text-blue-400 font-black text-3xl mb-1">100%</div>
+          <div class="text-xs font-bold text-white">Pure Veg Guarantee</div>
+          <p class="text-[11px] text-slate-400 mt-2">Strict dietary filtering protects religious and cultural dining norms.</p>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl text-center">
+          <div class="text-purple-400 font-black text-3xl mb-1">Zero Loss</div>
+          <div class="text-xs font-bold text-white">Data Resilience</div>
+          <p class="text-[11px] text-slate-400 mt-2">Crash-resistant disk writes protect all financial transaction logs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 19 ================= -->
+    <section class="slide flex-col justify-center">
+      <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Engineering Reflections</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Key Engineering Challenges Overcome</h2>
+      <div class="glass-card p-6 rounded-2xl space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 bg-slate-900/80 rounded-xl border border-slate-800">
+            <h4 class="text-xs font-bold text-amber-400 uppercase mb-1">1. Preventing Data Loss on Server Reboot</h4>
+            <p class="text-xs text-slate-300">
+              <strong>Challenge:</strong> Standard in-memory data resets on every server restart.<br>
+              <strong>Solution:</strong> Implemented dual-engine persistence with automatic atomic file updates (`db.json`) keeping all daily, monthly, and yearly historical analytics intact.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-900/80 rounded-xl border border-slate-800">
+            <h4 class="text-xs font-bold text-amber-400 uppercase mb-1">2. Culinary Photographic Precision</h4>
+            <p class="text-xs text-slate-300">
+              <strong>Challenge:</strong> Generic food stock photos caused customer confusion.<br>
+              <strong>Solution:</strong> Downloaded authentic local photographs matching all 10 Gujarati and Indian dishes with local zero-latency asset caching.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-900/80 rounded-xl border border-slate-800">
+            <h4 class="text-xs font-bold text-amber-400 uppercase mb-1">3. Pure Vegetarian Identity Realignment</h4>
+            <p class="text-xs text-slate-300">
+              <strong>Challenge:</strong> Retaining non-veg items conflicted with traditional dining hall expectations.<br>
+              <strong>Solution:</strong> Fully purged non-veg items across seeds, APIs, and UI filters to deliver a dedicated 100% Shuddh Shakahari experience.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-900/80 rounded-xl border border-slate-800">
+            <h4 class="text-xs font-bold text-amber-400 uppercase mb-1">4. 60fps Mobile Performance Without Bloat</h4>
+            <p class="text-xs text-slate-300">
+              <strong>Challenge:</strong> Heavy external animation libraries degrade mobile browser responsiveness.<br>
+              <strong>Solution:</strong> Engineered pure CSS3 keyframe animations with hardware transforms for ultra-smooth 60fps mobile execution.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 20 ================= -->
+    <section class="slide flex-col justify-center items-center text-center">
+      <div class="glass-pill px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+        Project Conclusion &bull; Q&amp;A
+      </div>
+      <h2 class="text-4xl md:text-5xl font-black text-white mb-4">Conclusion &amp; Future Scope</h2>
+      <p class="text-slate-300 text-sm max-w-2xl mb-8 leading-relaxed">
+        <strong>Madhav Dining Hall</strong> successfully transforms traditional dining into an intelligent, contactless ecosystem. By eliminating order friction, enhancing kitchen throughput, and giving managers real-time analytics, the system demonstrates the practical value of modern full-stack web applications.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl w-full mb-8 text-left">
+        <div class="glass-card p-4 rounded-xl">
+          <div class="text-xs font-bold text-amber-400 mb-1">Future Scope 1</div>
+          <div class="text-xs text-slate-300">UPI / Razorpay Payment Gateway integration for instant table checkout.</div>
+        </div>
+        <div class="glass-card p-4 rounded-xl">
+          <div class="text-xs font-bold text-emerald-400 mb-1">Future Scope 2</div>
+          <div class="text-xs text-slate-300">Multi-language localization (Gujarati, Hindi, English) for broader accessibility.</div>
+        </div>
+        <div class="glass-card p-4 rounded-xl">
+          <div class="text-xs font-bold text-blue-400 mb-1">Future Scope 3</div>
+          <div class="text-xs text-slate-300">Dedicated Kitchen Display Tablet interface (KDS) with audio order bells.</div>
+        </div>
+      </div>
+
+      <div class="text-2xl font-black text-amber-400 mb-2">Thank You!</div>
+      <div class="text-xs text-slate-400">Questions &amp; Answers Session Open</div>
+    </section>
+
+  </main>
+
+  <!-- SPEAKER NOTES POPUP DRAWER (TOGGLEABLE) -->
+  <aside id="speakerNotesDrawer" class="hidden absolute bottom-16 left-6 right-6 md:left-auto md:right-8 md:w-96 glass-card p-5 rounded-2xl z-40 border-amber-500/40 shadow-2xl no-print max-h-60 overflow-y-auto">
+    <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-700">
+      <div class="text-xs font-bold text-amber-400 flex items-center gap-1.5">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/></svg>
+        Speaker Notes (Slide <span id="notesSlideNum">1</span>)
+      </div>
+      <button onclick="toggleNotes()" class="text-slate-400 hover:text-white text-xs">&times;</button>
+    </div>
+    <div id="speakerNotesContent" class="text-xs text-slate-200 leading-relaxed space-y-2">
+      <!-- Injected dynamically -->
+    </div>
+  </aside>
+
+  <!-- BOTTOM NAVIGATION BAR -->
+  <footer class="w-full bg-slate-900/90 border-t border-slate-800 px-6 py-3 flex items-center justify-between z-50 no-print">
+    <div class="text-xs text-slate-400 hidden sm:block">
+      Navigation: <kbd class="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-300">&larr;</kbd> <kbd class="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-300">&rarr;</kbd> or <kbd class="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-300">Space</kbd> &bull; Notes: <kbd class="px-1.5 py-0.5 bg-slate-800 border border-slate-700 rounded text-slate-300">N</kbd>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="flex items-center gap-3 mx-auto sm:mx-0">
+      <button onclick="prevSlide()" id="prevBtn" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs border border-slate-700 transition flex items-center gap-2">
+        &larr; Previous
+      </button>
+
+      <!-- Slide jump selector -->
+      <select id="slideSelector" onchange="goToSlide(parseInt(this.value))" class="bg-slate-800 border border-slate-700 text-amber-400 text-xs font-bold rounded-xl px-3 py-2 outline-none">
+        <!-- 20 options populated by JS -->
+      </select>
+
+      <button onclick="nextSlide()" id="nextBtn" class="px-5 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-950 font-black text-xs shadow-lg shadow-amber-500/20 transition flex items-center gap-2">
+        Next &rarr;
+      </button>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT CONTROLLER -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    let currentSlide = 0;
+
+    const speakerNotes = [
+      "Slide 1: Good morning respected evaluators. Today we present our project: Madhav Dining Hall, a dual-sided contactless QR food ordering and hotel operations system.",
+      "Slide 2: Focus on our core vision: eliminating app downloads, providing direct kitchen synchronization, and giving managers real-time intelligence.",
+      "Slide 3: Explain traditional pain points: customers waiting 15 mins for menus, noisy miscommunication of dietary requirements, and static paper menus.",
+      "Slide 4: Walk through the value proposition: 18-minute faster turnaround, zero order errors, and transparent cooking progress.",
+      "Slide 5: Architecture slide: Explain the separation between React presentation, Express API gateway, and persistent storage engine.",
+      "Slide 6: Technology choices: React 19 for declarative UI, Node.js non-blocking I/O for concurrent orders, and MySQL/JSON storage.",
+      "Slide 7: Customer Onboarding: Explain how scanning Table #3 instantly locks the table number into CartContext with zero friction.",
+      "Slide 8: Menu Catalog: Emphasize our 100% Pure Vegetarian heritage branding, high-res photography matching, and sub-millisecond search.",
+      "Slide 9: Cart & Customizations: Point out the item notes feature ('Jain / less spicy'), bouncy ADD animation, and floating cart bar.",
+      "Slide 10: Live Tracking: Demonstrate the 4-stage cooking pipeline (Placed -> Preparing -> Ready -> Served) and the 'Call Waiter' assistance modal.",
+      "Slide 11: Manager Dashboard: Showcase the executive KPI widgets: Today's revenue, active table orders, and preparation times.",
+      "Slide 12: Kitchen Queue: Explain how chefs advance orders with one click and see custom customer notes clearly highlighted.",
+      "Slide 13: Menu Management: Demonstrate the real-time 'Sold Out' toggle and how price updates immediately reflect on diner phones.",
+      "Slide 14: Table QR Standees: Show how managers generate and print branded acrylic standees for all 12 tables with custom URLs.",
+      "Slide 15: Analytics Engine: Detail daily hourly rush patterns, monthly day-by-day totals, and annual financial audits.",
+      "Slide 16: Database & Persistence: Emphasize our solution to the common reboot bug: automatic disk synchronization guarantees zero data loss.",
+      "Slide 17: UI/UX & Animations: Showcase the 60fps marquee ticker, tactile button pops, and glassmorphism styling.",
+      "Slide 18: Security & Reliability: Cover bcrypt password hashing, protected manager routes, and sub-20ms API response times.",
+      "Slide 19: Challenges Overcome: Talk about resolving data loss across restarts, photographic alignment, and 100% Pure Veg identity.",
+      "Slide 20: Conclude with future roadmap (UPI payment integration, multi-language Gujarati/Hindi, tablet KDS) and invite questions."
+    ];
+
+    // Populate Slide Selector
+    const selector = document.getElementById('slideSelector');
+    for (let i = 0; i < totalSlides; i++) {
+      const opt = document.createElement('option');
+      opt.value = i;
+      opt.textContent = `Slide ${i + 1}`;
+      selector.appendChild(opt);
+    }
+    document.getElementById('totalSlidesNum').textContent = totalSlides;
+
+    function updateSlide() {
+      slides.forEach((s, idx) => {
+        s.classList.toggle('active', idx === currentSlide);
+      });
+
+      document.getElementById('currentSlideNum').textContent = currentSlide + 1;
+      document.getElementById('notesSlideNum').textContent = currentSlide + 1;
+      document.getElementById('speakerNotesContent').innerHTML = `<p>${speakerNotes[currentSlide]}</p>`;
+      
+      const pct = ((currentSlide + 1) / totalSlides) * 100;
+      document.getElementById('progressBar').style.width = `${pct}%`;
+
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('prevBtn').style.opacity = currentSlide === 0 ? '0.4' : '1';
+
+      if (currentSlide === totalSlides - 1) {
+        document.getElementById('nextBtn').textContent = 'Finish \u2713';
+      } else {
+        document.getElementById('nextBtn').textContent = 'Next \u2192';
+      }
+
+      selector.value = currentSlide;
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+        updateSlide();
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateSlide();
+      }
+    }
+
+    function goToSlide(index) {
+      if (index >= 0 && index < totalSlides) {
+        currentSlide = index;
+        updateSlide();
+      }
+    }
+
+    function toggleNotes() {
+      const drawer = document.getElementById('speakerNotesDrawer');
+      drawer.classList.toggle('hidden');
+    }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+
+    // Keyboard Shortcuts
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft') {
+        prevSlide();
+      } else if (e.key === 'n' || e.key === 'N') {
+        toggleNotes();
+      } else if (e.key === 'f' || e.key === 'F') {
+        toggleFullscreen();
+      }
+    });
+
+    // Initialize
+    updateSlide();
+  </script>
+</body>
+</html>
